@@ -80,6 +80,9 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
         <p className="euiScreenReaderOnly">
           {this.props.vis.type.title} visualization, not yet accessible
         </p>
+        {this.props.visParams.isDonut && (
+          <p className="text-center">Tổng số: {this.props.visData.hits}</p>
+        )}
         <div
           aria-hidden={!this.props.vis.type.isAccessible}
           className="visChart"
@@ -93,10 +96,8 @@ class VisualizationChart extends React.Component<VisualizationChartProps> {
     if (!this.chartDiv.current || !this.containerDiv.current) {
       throw new Error('chartDiv and currentDiv reference should always be present.');
     }
-
     const { vis } = this.props;
     const Visualization = vis.type.visualization;
-
     this.visualization = new Visualization(this.chartDiv.current, vis);
 
     // We know that containerDiv.current will never be null, since we will always

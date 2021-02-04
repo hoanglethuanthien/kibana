@@ -242,7 +242,7 @@ export class PieChart extends Chart {
           }
           if (showValues) {
             const value = numeral(d.value / 100).format('0.[00]%');
-            return `${d.name} (${value})`;
+            return `${d.size} (${value})`;
           }
           return d.name;
         })
