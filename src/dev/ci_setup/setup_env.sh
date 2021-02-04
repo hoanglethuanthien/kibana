@@ -83,7 +83,7 @@ if [[ "$installNode" == "true" ]]; then
   else
     if [ -d "$nodeDir" ]; then
       echo " -- clearing previous node.js install"
-      rm -rf "$nodeDir"
+      del "$nodeDir"
     fi
 
     echo " -- downloading node.js from $nodeUrl"

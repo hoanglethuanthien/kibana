@@ -167,7 +167,7 @@ def doSetup() {
     } catch (ex) {
       try {
         // Setup expects this directory to be missing, so we need to remove it before we do a retry
-        bash("rm -rf ../elasticsearch", "Remove elasticsearch sibling directory, if it exists")
+        bash("del ../elasticsearch", "Remove elasticsearch sibling directory, if it exists")
       } finally {
         throw ex
       }

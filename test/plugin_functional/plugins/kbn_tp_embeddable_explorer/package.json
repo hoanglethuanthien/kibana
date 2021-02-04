@@ -13,7 +13,7 @@
   },
   "scripts": {
     "kbn": "node ../../../../scripts/kbn.js",
-    "build": "rm -rf './target' && tsc"
+    "build": "del './target' && tsc"
   },
   "devDependencies": {
     "@kbn/plugin-helpers": "9.0.2",

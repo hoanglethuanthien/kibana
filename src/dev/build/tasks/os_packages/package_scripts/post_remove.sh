@@ -45,11 +45,11 @@ fi
 
 if [ "$REMOVE_DIRS" = "true" ]; then
   if [ -d "<%= optimizeDir %>" ]; then
-    rm -rf "<%= optimizeDir %>"
+    del "<%= optimizeDir %>"
   fi
 
   if [ -d "<%= pluginsDir %>" ]; then
-    rm -rf "<%= pluginsDir %>"
+    del "<%= pluginsDir %>"
   fi
 
   if [ -d "<%= configDir %>" ]; then

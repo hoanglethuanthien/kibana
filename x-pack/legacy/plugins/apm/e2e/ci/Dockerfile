@@ -11,13 +11,13 @@ RUN apt-get -qq update \
     libxss1 \
     libasound2 \
     --no-install-recommends \
-  && rm -rf /var/lib/apt/lists/*
+  && del /var/lib/apt/lists/*
 
 ## Add host.docker.internal to localhost
 RUN apt-get -qq update \
   && apt-get -y -qq install dnsutils \
     --no-install-recommends \
-  && rm -rf /var/lib/apt/lists/*
+  && del /var/lib/apt/lists/*
 
 COPY entrypoint.sh /entrypoint.sh
 

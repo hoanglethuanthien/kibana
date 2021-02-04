@@ -9,7 +9,7 @@
   "license": "Apache-2.0",
   "scripts": {
     "kbn": "node ../../scripts/kbn.js",
-    "build": "rm -rf './target' && tsc"
+    "build": "del './target' && tsc"
   },
   "devDependencies": {
     "typescript": "3.7.2"

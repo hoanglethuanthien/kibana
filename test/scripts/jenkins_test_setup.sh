@@ -5,7 +5,7 @@ set -e
 function post_work() {
   set +e
   if [[ -z "$REMOVE_KIBANA_INSTALL_DIR" && -z "$KIBANA_INSTALL_DIR" && -d "$KIBANA_INSTALL_DIR" ]]; then
-    rm -rf "$REMOVE_KIBANA_INSTALL_DIR"
+    del "$REMOVE_KIBANA_INSTALL_DIR"
   fi
 }
 
